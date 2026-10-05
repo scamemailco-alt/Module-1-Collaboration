@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Summary</title>
+    <style>
+        body { font-family: Segoe UI, Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 8px; }
+        .row { margin: 8px 0; }
+        .label { font-weight: bold; display: inline-block; width: 220px; }
+        a { display: inline-block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Student Registration Summary</h1>
+
+    <div class="row"><span class="label">Student Name:</span> {{ name }}</div>
+    <div class="row"><span class="label">Student ID:</span> {{ student_id }}</div>
+    <div class="row"><span class="label">Major:</span> {{ major }}</div>
+    <div class="row"><span class="label">Class Standing:</span> {{ standing }}</div>
+    <div class="row"><span class="label">Programming Languages:</span> {{ languages }}</div>
+    <div class="row"><span class="label">Expected Graduation:</span> {{ grad_year }}</div>
+    <div class="row"><span class="label">Comments:</span> {{ comments }}</div>
+
+    <a href="{% url 'student_form' %}">← Submit another student</a>
+</body>
+</html>
